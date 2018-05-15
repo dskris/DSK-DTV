@@ -1,0 +1,37 @@
+<html>
+<head>
+  <script type="text/javascript" src="js/iframe_api.js"></script>
+</head>
+<body>
+	<iframe id="player" src="https://www.youtube.com/embed/NQ9RtLrapzc?enablejsapi=1&autoplay=1" width="320" height="240"></iframe>
+    <script>
+      var player;
+function onYouTubeIframeAPIReady() {
+  yt_embedded_player = new YT.Player( 'player', {
+    events: { 'onStateChange': onPlayerStateChange }
+  });
+}
+
+function playNextVideo() {
+    if (playlist.length > 0) {
+        yt_embedded_player.loadVideoById(nextId(), 0);
+        yt_embedded_player.playVideo();
+    }
+}
+
+onPlayerStateChange = function (_event) {
+    if (_event.data == YT.PlayerState.ENDED) playNextVideo();
+}
+
+
+var playlist = ['NQ9RtLrapzc','t3cx4-Rh9DA','2vjPBrBU-TM'],
+    i = 0
+function nextId(){
+    return playlist[i==playlist-1?i=0:++i];
+}
+
+    </script>    
+</body>
+</html>
+
+<!--http://jsfiddle.net/ajt22r72/5/-->

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dugout TV</title>
+  
+  
+  <style type="text/css">
+  	
+  	.video-container {
+  position:relative;
+}
+.userVideo {
+    height: 240px;
+    width: 320px;
+    float: left;
+    border:5px solid orange;
+    position: absolute; 
+}
+
+.peerVideo {
+     height: 240px;
+    width: 320px;
+    border:5px solid blue;
+    position: absolute;
+}
+  </style>
+
+  
+</head>
+
+<body>
+
+	<div class='video-container'>
+
+  <video class='userVideo' src="http://www.w3schools.com/html/movie.mp4" id="myvideo" width="320" height="240" controls style="background:black">
+</video>
+
+<img id="peer" class='peerVideo' src="wines.jpg" alt="Smiley face" width="320" height="240" style="display:none">
+
+<iframe id="video" width="320" height="240"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+</div>
+  
+  
+
+
+
+
+</body>
+
+<script type="text/javascript">
+	
+			var myvid = document.getElementById('myvideo');
+
+		function PerformCheck() {
+		    var curTime = parseInt(myvid.currentTime, 10);
+		    if (curTime < 2) {
+		        setTimeout(PerformCheck, 200);
+		    } else {
+		        myvid.pause();
+		        PlayCommercial();
+		    }
+		}
+
+		function PlayCommercial() {
+		    // TODO: Display image overlay
+		   
+		    setTimeout(ResumeVideo, 5000);
+		     document.getElementById("peer").style.display = "inline";
+		}
+
+		function ResumeVideo() {
+		    // TODO: Remove image overlay
+		     document.getElementById("peer").style.display = "none";
+		    myvid.play();
+		}
+
+
+		myvid.onplay = PerformCheck();
+		var myvids = [
+		"http://www.w3schools.com/html/movie.mp4",
+		  "http://www.w3schools.com/html/mov_bbb.mp4",
+		  "http://www.w3schools.com/html/mov_bbb.mp4"
+		  
+		  ];
+		var activeVideo = 0;
+
+		myvid.addEventListener('ended', function(e) {
+		  // update the active video index
+		  activeVideo = (++activeVideo) % myvids.length;
+
+		  // update the video source and play
+		  myvid.src = myvids[activeVideo];
+		  myvid.play();
+		});
+</script>
+
+</html>

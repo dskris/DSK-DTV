@@ -1,0 +1,305 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/iframe_api.js"></script>
+	 <style type="text/css">
+       html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+  	
+  	.video-container {
+  position:relative;
+}
+.userVideo {
+    position: relative;
+     width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+
+.peerVideo {
+     /*height: 540px;
+    width: 620px;
+    border:5px solid blue;
+    position: absolute;*/
+    position: relative;
+     width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('wines.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            z-index: 1;
+}
+
+.peerVideo2{
+
+    position: relative;
+     width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('liquor.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            z-index: 1;
+
+}
+
+.peerVideo3{
+
+    position: relative;
+     width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('promo.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            z-index: 1;
+}
+
+
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+   z-index: 3;
+}
+
+.image3 {
+      position: absolute;
+       width: 100%;
+            height: 100%;
+}
+
+
+  </style>
+</head>
+<body>
+	<div class='video-container'>
+    
+    
+    <div class="parent">
+     <img id="peer4" class="image3" src="show.jpg"/>
+  <div class='userVideo' id="player"  style="opacity:0"></div>
+  
+  <img class="image2" src="dugout-logo.png" />
+</div>
+    <!--<img id="peer" class='peerVideo' src="wines.jpg" alt="Smiley face" width="620" height="540" style="display:none">
+     <img id="peer2" class='peerVideo2' src="liquor.jpg" alt="Smiley face" width="620" height="540" style="display:none">
+    <img id="peer3" class='peerVideo3' src="promo.jpg" alt="Smiley face" width="620" height="540" style="display:none">-->
+    <img id="peer" class='peerVideo' style="display:none">
+    <img id="peer2" class='peerVideo2' style="display:none">
+    <img id="peer3" class='peerVideo3' style="display:none">
+     
+    
+</div>
+    <script>
+       (function() {
+       	var j=0;
+       	var myTimer;
+      
+
+ /*var stopPlayAt = middleVideoTime(time, // Stop play at time in seconds
+      stopPlayTimer;   // Reference to settimeout call
+
+      function middleVideoTime(time){
+
+
+        return newtime;
+
+      }*/
+
+  /*var startPlayAt = 10,
+  	startPlayTimer;*/
+
+  // This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement("script");
+  tag.src = "//www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName("script")[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // This function creates an <iframe> (and YouTube player)
+  // after the API code downloads.
+  var player;
+  window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player("player", {
+      "height": "315",
+      "width": "560",
+      "videoId": "CUf894Ir7C0?enablejsapi=1&autoplay=1&vq=hd1080",
+       /* playerVars: {
+        'autoplay': 1,
+        'controls': 0,
+        'showinfo' : 0, // <- This part here
+        'wmode': 'opaque',
+        'rel': 0
+    },*/
+      "events": {
+        "onReady": onPlayerReady,
+        "onStateChange": onPlayerStateChange
+      }
+    });
+  }
+
+  function playNextVideo() {
+    if (playlist.length > 0) {
+        player.loadVideoById(nextId(), 0);
+        player.playVideo();
+    }
+}
+
+function getvideomiddle(time){
+
+  var final = time/2;
+
+  return final;
+
+}
+
+  // The API will call this function when the video player is ready.
+  // This automatically starts the video playback when the player is loaded.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+
+
+  // The API calls this function when the player's state changes.
+  function onPlayerStateChange(event) {
+
+  	if(event.data==1) { // playing
+            myTimer = setInterval(function(){ 
+                var time;
+                time = player.getCurrentTime();
+               
+
+                //alert(time);
+                if(time == 9.822676956130981){
+                	alert(time);
+                	//pause at 00:10
+                //setTimeout(function(){ player.pauseVideo(); }, 1000);
+                //play at 15:00
+                //setTimeout(function(){ player.playVideo(); }, 5000);
+            }
+                //$("#timeHolder").text(time);
+            }, 100);
+        }
+        else { // not playing
+            clearInterval(myTimer);
+        }
+
+    var time, rate, remainingTime;
+    clearTimeout(stopPlayTimer);
+    if (event.data == YT.PlayerState.PLAYING) {
+       duration = player.getDuration();
+
+       realduration = getvideomiddle(duration);
+        var stopPlayAt = realduration,
+         // Stop play at time in seconds
+      stopPlayTimer;
+      //document.getElementById("player").style.opacity = "0";
+      document.getElementById("peer4").style.opacity = "1";
+      time = player.getCurrentTime();
+      // Add .4 of a second to the time in case it's close to the current time
+      // (The API kept returning ~9.7 when hitting play after stopping at 10s)
+      if (time + .4 < stopPlayAt) {
+        rate = player.getPlaybackRate();
+        remainingTime = (stopPlayAt - time) / rate;
+        stopPlayTimer = setTimeout(pauseVideo, remainingTime * 1000);
+      }
+
+      /* if (time + .4 < startPlayAt) {
+        rate = player.getPlaybackRate();
+        remainingTime = (startPlayAt - time) / rate;
+        startPlayTimer = setTimeout(pauseVideo, remainingTime * 1000);
+      }*/
+
+    }
+    if (event.data === 1) {
+      //playing
+     document.getElementById("player").style.opacity = "1";
+     document.getElementById("peer4").style.opacity = "0";
+    }
+
+    	
+    if (event.data == YT.PlayerState.ENDED) {
+      //hide player when end
+      document.getElementById("player").style.opacity = "0";
+        document.getElementById("peer4").style.opacity = "1";
+    //alert(j);
+
+    if(j==0){
+
+      document.getElementById("player").style.display = "none";
+       document.getElementById("peer4").style.opacity = "0";
+     document.getElementById("peer2").style.display = "inline";
+
+ }else if(j==1){
+
+      document.getElementById("player").style.display = "none";
+      document.getElementById("peer4").style.opacity = "0";
+     document.getElementById("peer3").style.display = "inline";
+ }
+    //play at 7 seconds?
+    if(j==0){
+
+     setTimeout(function(){ document.getElementById("peer2").style.display = "none"; document.getElementById("peer4").style.opacity = "1"; document.getElementById("player").style.display = "inline";  playNextVideo(); }, 5000);
+
+ }else if(j==1){
+  
+     setTimeout(function(){ document.getElementById("peer3").style.display = "none"; document.getElementById("peer4").style.opacity = "1"; document.getElementById("player").style.display = "inline"; playNextVideo(); }, 5000);
+
+ }else{
+
+ //setTimeout(function(){ alert(i); playNextVideo(); }, 2000);
+ }
+
+     j++;
+    	
+    }
+  }
+
+  
+ /* var playlist = ['rUWxSEwctFU','i_d4NQBAfic','vLZcjhMuA1I'],*/
+ 
+ var playlist = ['CUf894Ir7C0','Vm3ito_xhoU','3yvEJ2uQJmo'],
+    i = 0
+function nextId(){
+	//alert(i);
+  //alert(playlist.length);
+  
+    return playlist[i==playlist-1?i=0:++i];
+  
+}
+
+  function pauseVideo() {
+    player.pauseVideo();
+    document.getElementById("player").style.display = "none";
+     document.getElementById("peer").style.display = "inline";
+    //play at 7 seconds?
+     setTimeout(function(){ document.getElementById("peer").style.display = "none";   document.getElementById("player").style.display = "inline"; player.playVideo(); }, 5000);
+     
+  }
+})();
+
+    </script>    
+</body>

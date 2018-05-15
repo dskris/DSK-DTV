@@ -1,0 +1,1263 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/iframe_api.js"></script>
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .video-container {
+        position: relative;
+    }
+
+    .userVideo {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .peerVideo {
+        /*height: 540px;
+    width: 620px;
+    border:5px solid blue;
+    position: absolute;*/
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('wines.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo2 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('lambslider.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo3 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('mutton.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo5 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('promo.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+
+    .peerVideo6 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('liquor.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo7 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('Chickenburger-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+    /*.peerVideo8{
+
+    position: relative;
+     width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('Pasta_promo-min.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            z-index: 1;
+
+                animation: fadein 2s;
+    -moz-animation: fadein 2s; 
+    -webkit-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
+}*/
+    /*.peerVideo9{
+
+    position: relative;
+     width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('Kampungfriedrice-min.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            z-index: 1;
+
+                animation: fadein 2s;
+    -moz-animation: fadein 2s; 
+    -webkit-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
+}*/
+
+    .peerVideo10 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('Watermelonlychee-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo11 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('Wine_promo-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+
+
+
+    .peerVideo14 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('appletine-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+
+    .peerVideo15 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('Stylo milo-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo16 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('crispysalmon-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo17 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('cocorambo-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo18 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('brainhemorrhage-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo19 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('mccallan-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo20 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('Jameson promo-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+
+
+    .peerVideo22 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('bowmore-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+
+    .peerVideo23 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('margarita-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo24 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('dugout whiskysourz-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo25 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('gin lemonade-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo26 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('green fairy-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo27 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('TIPSY-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo28 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('vote_banner-min.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo29 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('ladiesnight_dtv-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo30 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('mothersday_dtv-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo31 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('champ_league-min.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+    .peerVideo32 {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('FACup.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
+    }
+
+
+    .parent {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .image1 {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .image2 {
+        position: fixed;
+        /*top: 40px;
+  left: 1177px;*/
+        top: 6%;
+        left: 86%;
+        /*top: 40px;
+  left: 1177px;*/
+        z-index: 3;
+    }
+
+    #yourDiv {
+        position: fixed;
+        /*top: 40px;
+  left: 1177px;*/
+        top: 6%;
+        left: 86%;
+        /*top: 40px;
+  left: 1177px;*/
+        z-index: 5;
+    }
+
+    .image3 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadein {
+        /* Firefox */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadein {
+        /* Safari and Chrome */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadein {
+        /* Opera */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class='video-container'>
+        <div class="parent">
+            <img id="peer4" class="image3" src="show.jpg" />
+            <div class='userVideo' id="player" style="opacity:0"></div>
+            <img class="image2" src="dugout-logo.png" width="10%" />
+        </div>
+        <!--<img id="peer" class='peerVideo' src="wines.jpg" alt="Smiley face" width="620" height="540" style="display:none">
+     <img id="peer2" class='peerVideo2' src="liquor.jpg" alt="Smiley face" width="620" height="540" style="display:none">
+    <img id="peer3" class='peerVideo3' src="promo.jpg" alt="Smiley face" width="620" height="540" style="display:none">-->
+        <!--wines-->
+        <img id="peer" class='peerVideo' style="display:none">
+        <!--labslider-->
+        <img id="peer2" class='peerVideo2' style="display:none">
+        <!--mutton-->
+        <img id="peer3" class='peerVideo3' style="display:none">
+        <!--promo-->
+        <img id="peer5" class='peerVideo5' style="display:none">
+        <!--liquor-->
+        <img id="peer6" class='peerVideo6' style="display:none">
+        <!--chickenburger-->
+        <img id="peer7" class='peerVideo7' style="display:none">
+        <!--pasta-->
+        <!--<img id="peer8" class='peerVideo8' style="display:none">-->
+        <!--<img id="peer9" class='peerVideo9' style="display:none">-->
+        <!--watermelononly-->
+        <img id="peer10" class='peerVideo10' style="display:none">
+        <!--wine promo-->
+        <img id="peer11" class='peerVideo11' style="display:none">
+        <!--appletine-->
+        <img id="peer14" class='peerVideo14' style="display:none">
+        <!--stylo milo-->
+        <img id="peer15" class='peerVideo15' style="display:none">
+        <!--crispysalmon-->
+        <img id="peer16" class='peerVideo16' style="display:none">
+        <!--cocorambo-->
+        <img id="peer17" class='peerVideo17' style="display:none">
+        <!--brainhemorage-->
+        <img id="peer18" class='peerVideo18' style="display:none">
+        <!--mccallan-->
+        <img id="peer19" class='peerVideo19' style="display:none">
+        <!--<div id='yourDiv' style="color:white;">Loading...</div>-->
+        <!--jameson-->
+        <img id="peer20" class='peerVideo20' style="display:none">
+        <!--margarita-->
+        <img id="peer23" class='peerVideo23' style="display:none">
+        <!--whisky sours-->
+        <img id="peer24" class='peerVideo24' style="display:none">
+        <!--gin lemonade-->
+        <img id="peer25" class='peerVideo25' style="display:none">
+        <!--green fairy-->
+        <img id="peer26" class='peerVideo26' style="display:none">
+        <!--tipsy-->
+        <img id="peer27" class='peerVideo27' style="display:none">
+        <!--vote-->
+        <!--<img id="peer28" class='peerVideo28' style="display:none">-->
+        <!--ladies-->
+        <img id="peer29" class='peerVideo29' style="display:none">
+        <!--mothers day-->
+        <!--<img id="peer30" class='peerVideo30' style="display:none">-->
+        <!--champ-->
+        <img id="peer31" class='peerVideo31' style="display:none">
+
+        <!--FACUP-->
+        <img id="facup" class='peerVideo32' style="display:none">
+    </div>
+    <script>
+
+   
+
+
+    /* var loop = setInterval(function() {
+  
+  var d = new Date();
+  var day= d.getMonth();
+  var dh = d.getHours();
+  var dm = d.getMinutes();
+  var ds = d.getSeconds();
+  var p = 'Period 1: ';
+  
+  if (ds> 30) // if between 5-7
+     var p = 'Period 2: '+ d + 'hour'+ds;
+  else
+    var p = 'Period 3: '+ d + 'hour'+ds;
+  
+  document.getElementById('yourDiv').innerText =p;
+}, 1000);*/
+
+
+
+    (function() {
+        var z = 0;
+        var j = 0;
+        var flag = 0;
+        var l = 120;
+        var select = 0;
+        var myTimer;
+
+
+        /*var stopPlayAt = middleVideoTime(time, // Stop play at time in seconds
+             stopPlayTimer;   // Reference to settimeout call
+
+             function middleVideoTime(time){
+
+
+               return newtime;
+
+             }*/
+
+        /*var startPlayAt = 10,
+          startPlayTimer;*/
+        var clearunstarted;
+        var playlist;
+        // This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement("script");
+        tag.src = "//www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // This function creates an <iframe> (and YouTube player)
+        // after the API code downloads.
+        var player;
+        window.onYouTubeIframeAPIReady = function() {
+            player = new YT.Player("player", {
+                "height": "315",
+                "width": "560",
+                /*"videoId": "CUf894Ir7C0?enablejsapi=1&autoplay=1&vq=hd1080",*/
+                "videoId": "djBw5kppVuU?enablejsapi=1&autoplay=1&vq=hd1080",
+                /* playerVars: {
+        'autoplay': 1,
+        'controls': 0,
+        'showinfo' : 0, // <- This part here
+        'wmode': 'opaque',
+        'rel': 0
+    },*/
+                "events": {
+                    "onReady": onPlayerReady,
+                    "onStateChange": onPlayerStateChange
+                }
+            });
+        }
+
+        function playNextVideo() {
+            if (playlist.length > 0) {
+                player.loadVideoById(nextId(), 0);
+                player.playVideo();
+            }
+        }
+
+        function getvideomiddle(time) {
+
+            var final = time / 2;
+
+            return final;
+
+        }
+
+        function gettwominutead(time) {
+
+            var times = [];
+
+            var mins = 120;
+
+            while (mins < time) {
+
+                var divValue = parseInt(mins);
+                //clickedNumbers.push(divValue);
+                times.push(divValue);
+
+                mins = mins + 120;
+            }
+
+            return times;
+
+        }
+
+        // The API will call this function when the video player is ready.
+        // This automatically starts the video playback when the player is loaded.
+        function onPlayerReady(event) {
+            player.mute();
+            event.target.playVideo();
+        }
+
+
+
+        // The API calls this function when the player's state changes.
+        function onPlayerStateChange(event) {
+
+            if (event.data == 1) { // playing
+                myTimer = setInterval(function() {
+                    var time;
+                    time = player.getCurrentTime();
+
+
+                    //alert(time);
+                    if (time == 9.822676956130981) {
+                        alert(time);
+                        //pause at 00:10
+                        //setTimeout(function(){ player.pauseVideo(); }, 1000);
+                        //play at 15:00
+                        //setTimeout(function(){ player.playVideo(); }, 5000);
+                    }
+                    //$("#timeHolder").text(time);
+                }, 100);
+            } else { // not playing
+                clearInterval(myTimer);
+            }
+
+            var time, rate, remainingTime, select, sxtra;
+            clearTimeout(stopPlayTimer);
+            if (event.data == YT.PlayerState.PLAYING) {
+
+                clearTimeout(clearunstarted);
+
+                duration = player.getDuration();
+                //realduration = getvideomiddle(duration);
+                var times = gettwominutead(duration);
+
+
+
+                //var stopPlayAt = realduration,
+                var stopPlayAt = 3,
+
+
+                    // Stop play at time in seconds
+                    stopPlayTimer;
+                //document.getElementById("player").style.opacity = "0";
+                document.getElementById("peer4").style.opacity = "1";
+
+                // Add .4 of a second to the time in case it's close to the current time
+                // (The API kept returning ~9.7 when hitting play after stopping at 10s)
+                time = player.getCurrentTime();
+
+                extra = time;
+
+                select = 120;
+                clearTimeout(stopPlayTimer);
+
+                for (var i = 0; i < times.length - 1; i++) {
+                    clearTimeout(stopPlayTimer);
+
+                    if (time + .4 < select) {
+
+                        clearTimeout(stopPlayTimer);
+
+                    } else {
+
+                        select = select + 120;
+                        clearTimeout(stopPlayTimer);
+                    }
+
+                }
+
+                if (time + .4 < select) {
+                    rate = player.getPlaybackRate();
+                    remainingTime = (select - time) / rate;
+                    clearTimeout(stopPlayTimer);
+                    stopPlayTimer = setTimeout(pauseVideo, remainingTime * 1000);
+                }
+
+
+                /* if (time + .4 < startPlayAt) {
+                  rate = player.getPlaybackRate();
+                  remainingTime = (startPlayAt - time) / rate;
+                  startPlayTimer = setTimeout(pauseVideo, remainingTime * 1000);
+                }*/
+
+            }
+            if (event.data === 1) {
+                //playing
+                document.getElementById("player").style.opacity = "1";
+                document.getElementById("peer4").style.opacity = "0";
+            }
+
+            if (event.data == YT.PlayerState.UNSTARTED) {
+
+                //alert(JSON.stringify(playlist));
+                //alert(JSON.stringify(playlist.length));
+
+                //alert('UNSTARTED');
+
+                clearunstarted = window.setTimeout(function() { playNextVideo(); }, 8000);
+
+
+
+            }
+
+
+            if (event.data == YT.PlayerState.ENDED) {
+                //alert(playlist.length);
+                //alert('j'+j);
+                clearTimeout(stopPlayTimer);
+                /*  if(j==28){
+                   location.reload();
+                 }*/
+
+                var d = new Date();
+                var ds = d.getHours();
+
+
+
+                if (ds >= 09 && ds <= 19) {
+                    //mains
+                    var textArray = [
+                        
+                        /*'peer7',
+                        'peer3',
+                        'peer16',
+                        'peer15',
+                        'peer23',*/
+                        'peer29',
+                        'peer31',
+                        'facup'
+                    ];
+
+
+
+                } else if (ds >= 20 && ds <= 23) {
+                    //cocktails and bites
+                    var textArray = [
+                        'peer2',
+                        'peer17',
+                        'peer10',
+                        'peer14',
+                        'peer23',
+                        'peer24',
+                        'peer25',
+                        'peer29',
+                        'peer31',
+                        'facup'
+
+
+                    ];
+
+
+                } else if (ds >= 00 && ds <= 06) {
+                    //shooters
+                    var textArray = [
+                        'peer18',
+                        'peer23',
+                        'peer26',
+                        'peer27',
+                        'peer29',
+                        'peer31',
+                        'facup'
+
+                    ];
+                }
+
+                //current date
+                 var current = new Date();
+
+                //the last date and hour to that it will run on
+                var champdate = new Date('2018-05-27 03:00:00');
+
+                var facupdate = new Date('2018-05-20 23:59:00');
+
+                // find the matching string in array and if the date has been reached, remove it
+                for (var key in textArray) {
+                    if (textArray[key] == 'peer31' && (champdate < current)) {
+                        textArray.splice(key, 1);
+                    }
+                    if (textArray[key] == 'facup' && (facupdate < current)) {
+                        textArray.splice(key, 1);
+                    }
+                }
+
+                var randomNumber = Math.floor(Math.random() * textArray.length);
+
+                var peers = textArray[randomNumber];
+
+                flag = 0;
+                //hide player when end
+                document.getElementById("player").style.opacity = "0";
+                document.getElementById("peer4").style.opacity = "1";
+
+
+
+                document.getElementById("player").style.display = "none";
+                document.getElementById("peer4").style.opacity = "0";
+                document.getElementById(peers).style.display = "inline";
+
+
+
+                setTimeout(function() {
+                    document.getElementById(peers).style.display = "none";
+                    document.getElementById("peer4").style.opacity = "1";
+                    document.getElementById("player").style.display = "inline";
+                    playNextVideo();
+                }, 15000);
+
+                //setTimeout(function(){  playNextVideo(); }, 1000);
+
+
+                j++;
+
+            }
+        }
+
+
+        /*rAm-iBZ17PQvar playlist = ['UIrLyE7iz50','UIrLyE7iz50','UIrLyE7iz50', 'UIrLyE7iz50'],*/
+
+        /*var playlist = ['CUf894Ir7C0','Vm3ito_xhoU','3yvEJ2uQJmo','9rdth8OkXfk','KGjndtj-aDQ','bKOTKHtbM54', '45iAYUBCamI', 'pWvEilN10NM', 'CNNAqAJ256U','cv-OCrJnCPI','mewi5hIrzuM'],*/
+        playlist = ['djBw5kppVuU', 'rAm-iBZ17PQ', 'arg4v6vxzpI', 'DAhV1L7flNs', 'tWtywMUmA8E', '6xxH4Cv4o6I', 'YmTIRKFexJE', 'Qr3RUk8_OhU', '3yvEJ2uQJmo', 'HjwSX72aNK8', 'KGjndtj-aDQ', '45iAYUBCamI', 'pWvEilN10NM', 'CNNAqAJ256U', 'cv-OCrJnCPI', '00G8IWi2J9I', 'n7wI60sjZFQ', 'Cp6ylH80wOQ', 'k8MEzA0aGJg', 'h1lUXxdlKC4', '1s30LebmMjE', 'HlfjUHr0d6g', '18sjlyoKfL8', 'BI35Vru3xTc', 'g2KfkvxR0Dc', 'F1CW0MjD1T0', 'CFlppYxbixQ', '6xWpo5Dn254', 'NtdjavOHUhE', 'H_sPZkPW5so', 'YpYDd2rCuSw', 'eFCiycex5MA', '7JEWA6A-jxI', 'zZORuYKk8Xk', 'XsvSl6vE47c', 'OvXat4xxnnY', 'lOQBcP1M6sc', 'H0_VRfPIWoI', 'iABRpMlsRJ4', 'AsHs50KIY2M', 'djBw5kppVuU'],
+
+            //var playlist = ['56MDJ9tD6MY', 'arg4v6vxzpI','rAm-iBZ17PQ', 'CFlppYxbixQ','CFlppYxbixQ'],
+
+
+
+            //https://www.youtube.com/watch?v=HjwSX72aNK8
+            //https://www.youtube.com/watch?v=CFlppYxbixQ
+            //https://www.youtube.com/watch?v=00G8IWi2J9I
+            //https://www.youtube.com/watch?v=Cp6ylH80wOQ
+            //https://www.youtube.com/watch?v=djBw5kppVuU
+
+            i = 0
+
+        function nextId() {
+            //alert(i);
+            //alert(playlist.length);
+            if (i == playlist.length - 1) {
+                location.reload();
+            }
+            //alert(playlist.length);
+            return playlist[i == playlist - 1 ? i = 0 : ++i];
+
+        }
+
+        function pauseVideo() {
+
+
+
+            var news = player.getCurrentTime();
+
+            var roundoff = Math.round(news / 60 * 10) / 10;
+            //alert(roundoff);
+
+            if (roundoff == 2 || roundoff == 4 || roundoff == 6 || roundoff == 8 || roundoff == 10 || roundoff == 12 || roundoff == 14 || roundoff == 16 || roundoff == 18 || roundoff == 20 || roundoff == 22 || roundoff == 24) {
+
+                player.pauseVideo();
+
+                document.getElementById("player").style.display = "none";
+
+                var d = new Date();
+                var ds = d.getHours();
+
+
+
+                if (ds >= 9 && ds <= 19) {
+                    //mains
+                    var textArray = [
+                        
+                        'peer7',
+                        'peer3',
+                        'peer16',
+                        'peer15',
+                        'peer23',
+                        'peer29',
+                        'peer31',
+                        'facup'
+                    ];
+
+
+
+                } else if (ds >= 20 && ds <= 23) {
+                    //cocktails and bites
+                    var textArray = [
+                        'peer2',
+                        'peer17',
+                        'peer10',
+                        'peer14',
+                        'peer23',
+                        'peer24',
+                        'peer25',
+                        'peer29',
+                        'peer31',
+                        'facup'
+
+
+                    ];
+
+
+                } else if (ds >= 00 && ds <= 06) {
+                    //shooters
+                    var textArray = [
+                        'peer18',
+                        'peer23',
+                        'peer26',
+                        'peer27',
+                        'peer29',
+                        'peer31',
+                        'facup'
+
+                    ];
+                }
+
+                //current date
+                 var current = new Date();
+
+                //the last date and hour to that it will run on
+                var champdate = new Date('2018-05-27 03:00:00');
+
+                var facupdate = new Date('2018-05-20 23:59:00');
+
+                // find the matching string in array and if the date has been reached, remove it
+                for (var key in textArray) {
+                    if (textArray[key] == 'peer31' && (champdate < current)) {
+                        textArray.splice(key, 1);
+                    }
+                    if (textArray[key] == 'facup' && (facupdate < current)) {
+                        textArray.splice(key, 1);
+                    }
+                }
+
+
+                var randomNumber = Math.floor(Math.random() * textArray.length);
+
+                var peer = textArray[randomNumber];
+
+                document.getElementById(peer).style.display = "inline";
+
+                //play at 7 seconds?
+                setTimeout(function() {
+                    document.getElementById(peer).style.display = "none";
+                    document.getElementById("player").style.display = "inline";
+                    player.playVideo();
+                }, 15000);
+
+
+
+
+            }
+
+        }
+    })();
+    </script>
+</body>
